@@ -6,7 +6,7 @@ import { actionCreators } from './state/index';
 
 function App() {
 
-  const account = useSelector ((state)=>state.account)
+  const number = useSelector ((state)=>state.number)
   const dispatch = useDispatch()
 
   const {increase, decrease} = bindActionCreators(actionCreators, dispatch)
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{account}</h1>
+      <h1>{number}</h1>
       <button onClick={()=>increase(1)}>+</button>
       <button onClick={()=>decrease(1)}>-</button>
     </div>
